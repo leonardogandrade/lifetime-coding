@@ -17,8 +17,20 @@ and find out a reference code.
 Take a look at the listed resources below:
 
 1.  Data structures
+
     - Stacks
     - Linked lists
+
 2.  Searching algorithms
+
     - Binary search
-3.  Interview code challenges
+
+3.  Gihub
+
+    - Basic commands
+    - Advanced techniques
+
+4.  Tests
+    - Unit tests
+    - integrated tests
+5.  Interview code challenges
