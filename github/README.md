@@ -27,7 +27,7 @@ at Figure-1 commit is when you mark all the green dots to be uploaded to remote.
     git commit -m '<a description for this changes>'
 ```
 
-![Figure 1 - Git commit](https://github.com/leonardogandrade/lifetime-coding/img/git-commit.png)
+![Figure 1 - Git commit](https://github.com/leonardogandrade/lifetime-coding/blob/master/img/git-commit.png)
 
 3. Git push
 
