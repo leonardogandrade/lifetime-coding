@@ -591,6 +591,64 @@ const ticTacToe = (matrix) => {
     return winner;
 }
 
+function setsFrom(a, b) {
+
+
+    function arrayEquals(a, b) {
+        return Array.isArray(a) &&
+            Array.isArray(b) &&
+            a.length === b.length &&
+            a.every((val, index) => val === b[index]);
+    }
+
+    let pairs = 0;
+    let members = 0;
+    let swap = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < j < b.length; j++) {
+            if (a[i] != b[i])
+                swap++;
+            else
+                pairs++;
+            break;
+        }
+    }
+
+    const a_array_sorted = a.sort((a, b) => a - b);
+    const b_array_sorted = b.sort((a, b) => a - b);
+
+    // for (let i = 0; i < a.length; i++) {
+    //     console.log(a[i], b[i])
+    //     if (a[i] === b[i]) {
+    //         pairs++
+    //     } else {
+    //         swap++;
+    //     }
+
+    // }
+
+    // const a = [4, 6, 3]
+    // const b = [2, 1, 1]
+
+    // for (a_ in a_array_sorted) {
+    //     for (b_ in b_array_sorted) {
+    //         if (a_ === b_) {
+    //             members++;
+    //             pairs++;
+    //         }
+    //     }
+    // }
+
+    console.log(pairs, swap)
+
+    if (pairs >= 1 && swap <= 2 && arrayEquals(a_array_sorted, b_array_sorted))
+        return true;
+
+    return false;
+
+}
+
 module.exports = {
     century,
     palindrome,
@@ -614,6 +672,7 @@ module.exports = {
     addBorder,
     greaterNotInList,
     ticTacToe,
+    setsFrom,
 }
 
 // 2, 3, 6, 8, 10, 20

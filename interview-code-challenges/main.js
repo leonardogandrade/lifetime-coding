@@ -20,7 +20,8 @@ const {
     addBorder,
     greaterNotInList,
     ticTacToe,
-    commomCharacters } = require('./code_signals_modules');
+    setsFrom,
+    commomCharacters } = require('./modules');
 
 ////////////////////// Ex 01 //////////////////////
 // Type the year to find out the century.
@@ -153,11 +154,16 @@ const {
 // console.log(result)
 
 ////////////////////// EXTRA //////////////////////
-const matrix = [
-    ['o', 'x', 'o'],
-    ['o', 'x', 'x'],
-    ['x', 'x', 'o'],
-];
+// const matrix = [
+//     ['o', 'x', 'o'],
+//     ['o', 'x', 'x'],
+//     ['x', 'x', 'o'],
+// ];
 
-const result = ticTacToe(matrix);
+// const result = ticTacToe(matrix);
+// console.log(result);
+
+const a = [1, 2, 3]
+const b = [2, 1, 3]
+const result = setsFrom(a, b);
 console.log(result);
