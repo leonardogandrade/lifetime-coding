@@ -1,5 +1,6 @@
 const data = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
 //const data = Array.from({ length: 100000 }, (v, k) => k)
+// const data = Array.from({ length: 100000 }, (v, k) => k)
 
 const showSteps = (info) => {
     console.log(`Round: ${info.rounds} -> Low limit: ${info.lowLimit}, Middle: ${info.middleLimit}, High limit: ${info.highLimit}, Current: ${info.curretElement}`)

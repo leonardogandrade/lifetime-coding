@@ -1,72 +1,101 @@
 class Node {
-    constructor(element) {
-        this.element = element;
+    constructor(value) {
+        this.value = value;
         this.next = null;
     }
 }
 
-class LinkedList {
+class DataStore {
     constructor() {
         this.head = null;
         this.size = 0;
     }
 
-    add(element) {
-        const newNode = new Node(element);
+    append(value) {
+        const new_node = new Node(value);
+        let current = this.head;
+
         if (this.head === null) {
-            this.head = newNode;
+            this.head = new_node;
         } else {
-            let current = this.head;
             while (current.next) {
                 current = current.next;
             }
-            current.next = newNode;
+
+            current.next = new_node;
         }
         this.size++;
     }
 
-    isEmpty() {
-        if (this.head != null)
-            return false;
-        return true;
+    insert(value, after) {
+        const new_node = new Node(value);
+        let current = this.head;
+
+        while (current.value != after) {
+            current = current.next;
+        }
+
+        new_node.next = current.next;
+        current.next = new_node;
+        this.size++;
     }
 
-    remove(element) {
+    remove(value_to_remove) {
         let current = this.head;
-        let previous = null;
+        let node_before = null;
 
-        while (current && !this.isEmpty()) {
-            if (element === current.element) {
-                if (previous === null)
-                    this.head = current.next
-                else
-                    previous.next = current.next;
-                this.size--;
-            }
-            previous = current;
+        while (current.value != value_to_remove) {
+            node_before = current;
             current = current.next;
+        }
+
+        node_before.next = current.next;
+    }
+
+    isEmpty() {
+        return this.head === null;
+    }
+
+    find(value) {
+        let current = this.head;
+        let position = 0;
+
+        if (current.next != null)
+            return 'not found';
+
+        while (current.value != value) {
+            current = current.next;
+            position++;
+        }
+
+        return {
+            value: current.value,
+            position: position + 1
         }
     }
 
     printList() {
-        let current = this.head
+        let current = this.head;
+        console.log('------------');
         while (current) {
-            console.log(current.element);
-            current = current.next
+            console.log(current.value);
+            current = current.next;
         }
     }
-
 }
 
-const LINKED_LIST = new LinkedList();
-LINKED_LIST.add(10);
-LINKED_LIST.add(20);
-LINKED_LIST.add(30);
-LINKED_LIST.add(40);
-LINKED_LIST.add(50);
+const dataStore = new DataStore();
 
-LINKED_LIST.printList();
+dataStore.append(10);
+dataStore.append(20);
+dataStore.append(30);
+dataStore.insert(23, 20);
+dataStore.insert(34, 30);
+dataStore.append(40);
+dataStore.append(50);
 
-LINKED_LIST.remove(30);
-console.log('-------------------')
-LINKED_LIST.printList();
+dataStore.printList();
+dataStore.remove(34)
+dataStore.printList();
+
+console.log(dataStore.find(230))
