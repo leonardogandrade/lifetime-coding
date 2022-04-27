@@ -21,6 +21,7 @@ const {
     greaterNotInList,
     ticTacToe,
     setsFrom,
+    is_palindrome,
     commomCharacters } = require('./modules');
 
 ////////////////////// Ex 01 //////////////////////
@@ -163,7 +164,22 @@ const {
 // const result = ticTacToe(matrix);
 // console.log(result);
 
-const a = [1, 2, 3]
-const b = [2, 1, 3]
-const result = setsFrom(a, b);
-console.log(result);
+// const a = [1, 2, 3]
+// const b = [2, 1, 3]
+// const result = setsFrom(a, b);
+// console.log(result);
+
+const word = 'zaa';
+console.log(is_palindrome(word))
+
+
+// let array = ['1', , '3', ,];
+
+// for (let index = 0; index < array.length; index++) {
+//     if (array[index] === undefined)
+//         array[index] = 'leo'
+// }
+
+// console.log(array)
+
+//a b d e f h i r u

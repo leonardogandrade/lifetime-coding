@@ -19,11 +19,17 @@ Take a look at the listed resources below:
 1.  Data structures
 
     - Stacks
+    - Arrays
     - Linked lists
+    - hash tables
+    - Sorting
+      - insert sort
+    - Memoization
 
 2.  Searching algorithms
 
     - Binary search
+    - Binary search tree
 
 3.  Gihub
 
@@ -31,6 +37,8 @@ Take a look at the listed resources below:
     - Advanced techniques
 
 4.  Tests
+
     - Unit tests
     - integrated tests
+
 5.  Interview code challenges

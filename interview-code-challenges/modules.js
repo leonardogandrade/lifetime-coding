@@ -649,8 +649,52 @@ function setsFrom(a, b) {
 
 }
 
+function is_palindrome(inputString) {
+    let sorted = inputString.split('').sort();
+    let stop = false;
+    l_init = 0;
+    l_final = sorted.length - 1;
+    p_init = 0;
+    p_final = sorted.length - 1;
+    let palindrome = [];
+    let aux = [];
+
+    while (!stop) {
+        if (sorted[l_init] === sorted[l_init + 1]) {
+            palindrome[p_init] = sorted[l_init];
+            palindrome[p_final] = sorted[l_init + 1];
+            sorted.splice(0, 2);
+            p_init++;
+            p_final--;
+
+        } else {
+            aux.push(sorted[l_init]);
+            sorted.splice(l_init, 1);
+        }
+
+        if (sorted.length === 0)
+            stop = true;
+    }
+
+    if (palindrome.length > 0) {
+        for (let index = 0; index < palindrome.length; index++) {
+            if (palindrome[index] === undefined)
+                palindrome[index] = aux.shift();
+        }
+    } else {
+        palindrome = aux;
+    }
+
+    let normal = palindrome.join('')
+    let reversed = palindrome.reverse().join('');
+    return normal === reversed;
+}
+
+
+
 module.exports = {
     century,
+    is_palindrome,
     palindrome,
     adjacent,
     poligon,

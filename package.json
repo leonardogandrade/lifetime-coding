@@ -9,5 +9,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.0.1"
+  },
+  "dependencies": {
+    "@types/jest": "^27.4.1"
+  }
 }
