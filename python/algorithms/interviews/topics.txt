@@ -1,0 +1,8 @@
+- Spread operator
+- Map, Reduce, Filter
+- bind
+- slice : cut array
+- splice : remove or insert into arrays
+- replace : replace an element
+- concat : concatenate arrays
+- 

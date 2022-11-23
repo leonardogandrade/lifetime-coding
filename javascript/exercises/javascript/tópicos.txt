@@ -1,0 +1,35 @@
+# Topics
+
+- Definitions
+
+# Hoisting
+# Closure
+# Arrow functions x Definitions
+
+
+- null and undefined - nullish coalescing operator ??
+- 
+
+#Principal Functions
+
+* substr                - Strings
+* Math.max              - Strings
+* Math.min              - Strings
+* slice                 - strings
+* split                 - Arrays
+* concat                - Arrays
+* reverse               - Arrays
+* splice                - Arrays
+* includes              - Strings         
+* some                  - Arrays        Verifies if at least one element matches with the comparasson
+* every                 - Arrays        Verifies either each value passes in the comparasson or not
+* find                  - Arrays        Returns the first element which match the comparasson
+* findIndex             - Arrays        Returns the first index of the comparative value
+* Objects.entries
+* isNaN
+# indexOf               - Strings | Arrays
+# instance of           - 
+
+# bind
+# protype
+# apply

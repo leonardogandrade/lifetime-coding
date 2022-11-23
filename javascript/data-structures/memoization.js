@@ -1,4 +1,4 @@
-const { fibonacciSequence } = require("../interview-code-challenges/modules");
+// const { fibonacciSequence } = require("../interview-code-challenges/modules");
 
 const memoizer = fn => {
     // create a structure to cache results.
@@ -8,7 +8,7 @@ const memoizer = fn => {
     return (...args) => {
         const key = JSON.stringify(args);
 
-        // verify it was calculated before and reuturn the result from key
+        // verify it was calculated before and return the result from key
         if (cache.has(key)) {
             console.log(`${args} already cached.`);
             return cache.get(key);
@@ -33,9 +33,10 @@ const factorial = memoizer(
         return n * factorial(--n)
     }
 )
-console.log(memoizer(sum_two_numbers(10, 20)))
-console.log(memoizer(sum_two_numbers(10, 40)))
-console.log(memoizer(sum_two_numbers(10, 20)))
+console.log(memoizer(factorial(10, 20)))
+console.log(memoizer(factorial(10, 20)))
+// console.log(memoizer(sum_two_numbers(10, 40)))
+// console.log(memoizer(sum_two_numbers(10, 20)))
 // console.log(factorial(5));
 //console.log(factorial(3))
 
