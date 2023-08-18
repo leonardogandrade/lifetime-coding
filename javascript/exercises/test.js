@@ -56,7 +56,7 @@ result = function myFunction(arr) {
 
 // console.log(result([1, 1, 1, 2]))
 
-// 5 - Join to sets
+// 5 - Join two sets
 result = function myFunction(a, b) {
     return new Set([...a, ...b]).entries
 }
