@@ -263,8 +263,8 @@ const commomCharacters = (s1, s2) => {
 }
 
 const levenshteinDistance = (str1, str2) => {
-    let s_major = ''
-    let s_minor = ''
+    let s_major;
+    let s_minor;
     let diff = 0;
 
     if (str1.length > str2.length) {
