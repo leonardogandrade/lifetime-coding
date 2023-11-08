@@ -23,21 +23,21 @@ def quicksort(arr, low, high):
         quicksort(arr, pivot + 1, high)
 
 
-# print(array)
-# quicksort(array, 0, len(array) - 1)
-# print(array)
+print(array)
+quicksort(array, 0, len(array) - 1)
+print(array)
 
 
-def quicksort_2(array):
-    if len(array) < 2:
-        return array
+# def quicksort_2(array):
+#     if len(array) < 2:
+#         return array
 
-    pivot = array[0]
+#     pivot = array[0]
 
-    less = [i for i in array[1:] if i < pivot]
-    greater = [i for i in array[1:] if i > pivot]
+#     less = [i for i in array[1:] if i < pivot]
+#     greater = [i for i in array[1:] if i > pivot]
 
-    return quicksort_2(less) + [pivot] + quicksort_2(greater)
+#     return quicksort_2(less) + [pivot] + quicksort_2(greater)
 
 
-print(quicksort_2(array))
+# print(quicksort_2(array))
