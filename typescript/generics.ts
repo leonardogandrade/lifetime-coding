@@ -110,9 +110,9 @@ interface GenericFn {
   <Type>(args: Type): Type;
 }
 
-function identity<Type>(args: Type): Type {
+function MyIdentity<Type>(args: Type): Type {
   return args;
 }
 
-let myIdentity: { <Type>(args: Type): Type } = identity;
+let myIdentity: { <Type>(args: Type): Type } = MyIdentity;
 console.log(myIdentity(15));
