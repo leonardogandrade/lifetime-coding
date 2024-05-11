@@ -381,6 +381,14 @@ const reverseStringRecursive = (inputString) => {
     return reverseParentheses(inputString)
 }
 
+const fibRecursive = (n) => {
+    if (n == 1 || n === 0) {
+        return n;
+    }
+    return fibRecursive(n - 1) + fibRecursive(n - 2);
+};
+
+
 const fibonacciSequence = (seq) => {
     const fibo = [1, 1]
     if (seq <= 1)
@@ -709,6 +717,7 @@ module.exports = {
     reverseString,
     reverseStringRecursive,
     fibonacciSequence,
+    fibRecursive,
     factorial,
     factorialRecursive,
     factorialMemoization,

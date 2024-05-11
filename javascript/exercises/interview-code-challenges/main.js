@@ -22,6 +22,7 @@ const {
     ticTacToe,
     setsFrom,
     is_palindrome,
+    fibRecursive,
     commomCharacters } = require('./modules');
 
 ////////////////////// Ex 01 //////////////////////
@@ -117,6 +118,9 @@ const {
 // const seq = 10;
 // const result = fibonacciSequence(seq);
 // console.log(result);
+
+const result = fibRecursive(46);
+console.log(result);
 
 // const num = 5;
 //const result = factorial(num);
