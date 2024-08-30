@@ -33,3 +33,38 @@ namespace ConditionalTypeEx2 {
   const s1: ConditionalEx2<string[]> = ["1", "2"];
   const n1: ConditionalEx2<number> = 10;
 }
+
+namespace ConditionalTypeEx3 {
+  type IdExtractIdType<T extends { id: number | string }> = T["id"];
+
+  interface IdNumber {
+    id: number;
+  }
+
+  interface IdString {
+    id: string;
+  }
+
+  type objIdNumber = IdExtractIdType<IdNumber>;
+
+  const num1: objIdNumber = 10;
+  console.log(num1);
+
+  // type ExtractIdType<T extends {id: string | number}> = T["id"]
+
+  // interface NumericId {
+  //     id: number
+  // }
+
+  // interface StringId {
+  //     id: string
+  // }
+
+  // interface BooleanId {
+  //     id: boolean
+  // }
+
+  // type NumericIdType = ExtractIdType<NumericId> // type NumericIdType = number
+  // type StringIdType = ExtractIdType<StringId> // type StringIdType = string
+  // type BooleanIdType = ExtractIdType<BooleanId> // won't work
+}
