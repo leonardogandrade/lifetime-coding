@@ -151,8 +151,8 @@ arr_ = [10, 15, 20];
 // console.log("Total time: ", end - start);
 
 // 3 - Coins
-// arr_ = [2, 5, 3, 6];
-// console.log(dp.coinsSumPossibilities(arr_, arr_.length, 10));
+arr_ = [2, 5, 3, 6];
+console.log(dp.coinsSumPossibilities(arr_, arr_.length, 1));
 
 // 4 - Knapsack
 
@@ -166,5 +166,8 @@ const size = n + 1;
 
 // 5 - climbingStairs2 - In how many different ways we can climb a stair of a certain number of stairs
 
+// const stairs = 3;
+// console.log(dp.climbingStairs2(stairs + 1));
+
 const stairs = 3;
-console.log(dp.climbingStairs2(stairs + 1));
+console.log(dp.climbingStair([1, 2, 3, 4, 5]));
